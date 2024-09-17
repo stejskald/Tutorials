@@ -1,0 +1,57 @@
+/*
+Comments here...
+*/
+body {
+    /* background-image: url(img.jpg);
+    background-position: center top; */
+    
+    background-color: lightblue;
+    opacity: 0.8;
+    margin-left: 5%;
+    margin-top: 40px;
+    height: 100%;
+    width: 100%;
+   
+}
+
+#title {
+    background-color: aqua;
+}
+
+h2 {
+    width: 200px;
+    background-color: blueviolet;
+}
+
+.paragraph, .heading3 {
+    color: red;
+}
+
+h2.heading2 {
+    color: darkcyan;
+    background-color: lightpink;
+}
+
+input {
+    margin: 5px;
+}
+
+p {
+    margin-top: 50px;
+    border-style: dashed;
+    width: 50%;
+}
+
+b {
+    margin-left: inherit;
+}
+
+table {
+    border-style: dashed none dashed none;
+    border-width: medium;
+    border-color: black;
+    border-radius: 10%;
+    padding: 5px 20px;   
+    outline-style: solid;
+    outline-offset: 2px;
+}
