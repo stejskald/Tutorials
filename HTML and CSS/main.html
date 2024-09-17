@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <h1 id="title">HTML Tutorial</h1>
@@ -13,9 +14,11 @@
     -->
     <h2>Table</h2>
     <table>
-        <th>Person</th>
-        <th>Age</th>
-        <th>Height [cm]</th>
+        <tr>
+            <th>Person</th>
+            <th>Age</th>
+            <th>Height [cm]</th>
+        </tr>
         <tr>
             <td>Alexander</td>
             <td>26</td>
@@ -25,6 +28,11 @@
             <td>Martin</td>
             <td>22</td>
             <td>194</td>
+        </tr>
+        <tr>
+            <td>Karolína</td>
+            <td>19</td>
+            <td>162</td>
         </tr>
     </table>
     
@@ -56,14 +64,34 @@
         I am red because of class paragraph... :-(
     </p>
 
-    <p>
+    <div>
         <b>
-            Division inheriting style here <==
+            Bold inheriting style here <== 
         </b>
-    </p>
-
+    </div>
+    
+    <h3>Icons</h3>
+    <!-- Utilising 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    in head section -->
+    <i class="material-icons">search</i>
+    <i class="material-icons">cloud</i>
+    <i class="material-icons">computer</i>
+    <i class="material-icons">apple</i>
+    
     <h3>Links</h3>
     <a href="https://www.youtube.com/watch?v=nu_pCVPKzTk&t=3965s">link</a>
-
+    
+    <h3>Combinators</h3>
+    <p>
+        Lorem ipsum odor amet, consectetuer adipiscing elit. <i>Tempus</i> fermentum nam suspendisse posuere dis bibendum, in semper. Ultrices accumsan proin mauris platea taciti inceptos netus. Dapibus libero mi <i>gravida ligula</i> ornare natoque. Quam fames ante dapibus suspendisse dictum ac.
+    </p>
+    <p>
+        Curae proin dui curae facilisi ullamcorper rutrum <i>aliquet purus hendrerit</i>. Pellentesque iaculis molestie lectus nunc enim cursus. Tellus volutpat phasellus <i>vehicula</i> facilisis pretium class? Taciti cursus vehicula <i>auctor</i> inceptos sollicitudin placerat ut lectus. Risus primis dapibus nunc non ridiculus consectetur risus <i>justo?</i> Condimentum taciti morbi ipsum vehicula urna neque nam ut ut.
+    </p>
+    <p>
+        Pellentesque fringilla eget iaculis at, a turpis porttitor nisl. Praesent nam malesuada vel sit nulla dignissim nunc. Volutpat <i>lacinia fringilla consectetur nascetur diam.</i> Cras inceptos mus dis amet volutpat nisl sollicitudin. Morbi sollicitudin nisi lorem metus convallis nec? Justo natoque laoreet aptent nulla fusce tempus ultrices justo. Adipiscing varius scelerisque netus; parturient at hendrerit quisque. Massa fames <i>montes nascetur;</i> enim laoreet aptent.
+    </p>
+    <i>adjacent to </i>p block, but this <i>is no more...</i>
 </body>
 </html>

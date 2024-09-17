@@ -9,9 +9,6 @@ body {
     opacity: 0.8;
     margin-left: 5%;
     margin-top: 40px;
-    height: 100%;
-    width: 100%;
-   
 }
 
 #title {
@@ -20,11 +17,21 @@ body {
 
 h2 {
     width: 200px;
-    background-color: blueviolet;
+    background-color: gray;
+    text-decoration-line: underline;
 }
 
 .paragraph, .heading3 {
     color: red;
+    border-style: dashed none dashed none;
+    border-width: medium;
+    border-color: black;
+    border-radius: 10%;
+    padding: 5px 20px;   
+    outline-style: solid;
+    outline-offset: 2px;
+    outline-color: black;
+    width: 30%;
 }
 
 h2.heading2 {
@@ -36,7 +43,7 @@ input {
     margin: 5px;
 }
 
-p {
+div {
     margin-top: 50px;
     border-style: dashed;
     width: 50%;
@@ -44,14 +51,46 @@ p {
 
 b {
     margin-left: inherit;
+    /* font-family: "Lucida Console", "Courier New", monospace; */
+    /* font-style: italic;
+    font-size: 0.75em; */
 }
 
 table {
-    border-style: dashed none dashed none;
-    border-width: medium;
-    border-color: black;
-    border-radius: 10%;
-    padding: 5px 20px;   
-    outline-style: solid;
-    outline-offset: 2px;
+    border-collapse: collapse;
+    border: 2px solid;
+    border-style: solid none solid none;
 }
+
+th, td {
+    width: 100px;
+    text-align: center;
+}
+
+th {
+    border-bottom: 2px solid;
+    height: 30px;
+}
+
+a {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* td:hover { */
+tr:hover {
+    background-color: yellowgreen;
+}
+
+/* Combinators "b" elements in "p" blocks are affected, it can be also nested*/
+p i {
+    color: magenta;
+}
+
+p + i {
+    color: blue;
+}
+
+/* p ~ em {
+    color: orange;
+} */
