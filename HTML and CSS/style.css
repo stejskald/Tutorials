@@ -43,11 +43,11 @@ input {
     margin: 5px;
 }
 
-div {
+/* div {
     margin-top: 50px;
     border-style: dashed;
     width: 50%;
-}
+} */
 
 b {
     margin-left: inherit;
@@ -94,3 +94,44 @@ p + i {
 /* p ~ em {
     color: orange;
 } */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.dropdown-button {
+    background-color: blue;
+    color: white;
+    padding: 13px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: lightcyan;
+    min-width: 150px;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 5px 8px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: blueviolet;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown:hover .dropdown-button{
+    background-color: yellowgreen;
+}
