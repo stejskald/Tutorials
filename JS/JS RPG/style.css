@@ -32,7 +32,7 @@ body {
 }
 
 #monsterStats {
-    /* display: none; */
+    display: none;
     border: 1px black solid;
     background-color: darkred;
     color: white;
@@ -41,9 +41,4 @@ body {
 
 .stat {
     padding-right: 10px;
-}
-
-button {
-    background-color: lightblue;
-    font-style: italic;
 }
