@@ -12,7 +12,7 @@ const port = 8000
 MongoClient.connect(
     uri,
     {
-        maxPoolsize: 50,
+        maxPoolSize: 50,
         wtimeoutMS: 2500,
         useNewUrlParser: true
     })
