@@ -7,8 +7,8 @@ const router = express.Router()
 router.route("/movie/:id").get(ReviewsCtrl.apiGetReviews) // ":id" can be anything -> "id" is variable / parameter
 router.route("/new").post(ReviewsCtrl.apiPostReview)
 router.route("/:id")
-    .get(ReviewsCtrl.apiGetReview)
-    .put(ReviewsCtrl.apiUpdateReview)
-    .delete(ReviewsCtrl.apiDeleteReview)
+  .get(ReviewsCtrl.apiGetReview)
+  .put(ReviewsCtrl.apiUpdateReview)
+  .delete(ReviewsCtrl.apiDeleteReview)
 
 export default router
