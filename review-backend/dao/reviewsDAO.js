@@ -33,7 +33,7 @@ export default class ReviewsDAO {
 
     static async getReview(reviewId) {
         try {
-            return await reviews.findOne({ _id: ObjectId(reviewId) })
+            return await reviews.findOne({ _id: ObjectId.createFromHexString(reviewId) })
         } catch (e) {
             console.error(`Unable to get review: ${e}`)
             return { error: e }
@@ -43,7 +43,7 @@ export default class ReviewsDAO {
     static async updateReview(reviewId, user, review) {
         try {
             const updateResponse = await reviews.updateOne(
-                { _id: ObjectId(reviewId) },
+                { _id: ObjectId.createFromHexString(reviewId) },
                 { $set: { user: user, review: review } }
             )
 
@@ -56,7 +56,7 @@ export default class ReviewsDAO {
 
     static async deleteReview(reviewId) {
         try {
-            const deleteResponse = await reviews.deleteOne({ _id: ObjectId(reviewId) })
+            const deleteResponse = await reviews.deleteOne({ _id: ObjectId.createFromHexString(reviewId) })
 
             return deleteResponse
         } catch (e) {
@@ -64,7 +64,7 @@ export default class ReviewsDAO {
         }
     }
 
-    static async getReviewByMovieId(movieId) {
+    static async getReviewsByMovieId(movieId) {
         try {
             const cursor = await reviews.find({ movieId: parseInt(movieId) })
             return cursor.toArray()
