@@ -96,7 +96,7 @@ const spin = () => {
   return reels;
 };
 
-// [[A B C], [D D A], [C B B]] transposition => [[A D C], [B D A], [C A B]]
+// [[A B C], [D D A], [C B B]] transposition => [[A D C], [B D B], [C A B]]
 const transpose = (reels) => {
   const rows = [];
 
@@ -123,7 +123,7 @@ const printRows = (rows) => {
   }
 };
 
-const getWinings = (rows, bet, lines) => {
+const getWinnings = (rows, bet, lines) => {
   let winnings = 0;
 
   for (let row = 0; row < lines; row++) {
@@ -149,17 +149,26 @@ const game = () => {
   let balance = deposit();
 
   while (true) {
+    console.log("You have a balance of $" + balance);
+
     const numberOfLines = getNumberOfLines();
     const bet = getBet(balance, numberOfLines);
-
     balance -= bet * numberOfLines;
-    
     const reels = spin();
     const rows = transpose(reels);
     printRows(rows);
-    const winnings = getWinings(rows, bet, numberOfLines);
+    const winnings = getWinnings(rows, bet, numberOfLines);
+    balance += winnings;
     console.log("You won, $" + winnings.toString());
 
-  }
+    if (balance <= 0) {
+      console.log("You ran out of money");
+      break;
+    }
 
+    const playAgain = prompt("Do you want to play again (y/n)?\n");
+    if (playAgain != "y") break;
+  }
 }
+
+game();
