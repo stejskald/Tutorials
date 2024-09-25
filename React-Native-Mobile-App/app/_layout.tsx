@@ -1,37 +1,48 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import { Slot, Stack } from 'expo-router'
+import { ThemeProvider } from '@react-navigation/native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
-import { useColorScheme } from '@/hooks/useColorScheme';
+// export const unstable_settings = {
+//   // Ensure any route can link back to `/`
+//   initialRouteName: "index",
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+//   auth: { // <= important!
+//     initialRouteName: "Login", // <= important!
+//   },
+// };
 
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
+const RootLayout = () => {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </ThemeProvider>
-  );
+    <>
+      <Text>Header</Text>
+      <Slot />
+      <Text>Footer</Text>
+    </>
+
+    // <Stack>
+    //   <Stack.Screen name='index' options={{ headerShown: false }} />
+    // </Stack>
+
+    // <ThemeProvider>
+      // <SafeAreaView style={{ flex: 1, margin: 0, padding: 0 }}>
+      //   <Stack screenOptions={{ headerShown: false }} >
+      //     <Stack.Screen name="tabs" /> {/* <= important! */}
+      //   </Stack>
+      // </SafeAreaView>
+    // </ThemeProvider>
+
+  )
 }
+
+export default RootLayout
+
+// const styles = StyleSheet.create({
+//   container: {
+//     display: "flex",
+//     flex: 1,
+//     alignItems: "center",
+//     justifyContent: "center"
+//   }
+// })

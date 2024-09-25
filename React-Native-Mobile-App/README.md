@@ -59,8 +59,10 @@ npx create-expo-app ./
 npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
 ```
 
-optional: edit **app.json** file
+Optional: edit **app.json** file
 
 ```bash
 npx expo start -c
 ```
+
+In app/_layout.tsx delete all and type "rnfes".
