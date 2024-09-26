@@ -1,68 +1,27 @@
-# Welcome to your Expo app 👋
+# React Native - My walkthrough
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Project Init from blank template
 
-## Get started
+`npx create-expo-app@latest ./ --template blank@latest` or `npx create-expo-app ./`
 
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-
-## My walkthrough
-
-### React Native Project Init
-
-<code language="bash">npx create-expo-app@latest ./ --template blank</code> or <code>npx create-expo-app ./</code>
-
-```bash
+```cmd
 npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
 ```
 
-Optional: edit **app.json** file
+Edit "main" key value in package.json to "expo-router/entry" => `"main": "expo-router/entry",`.
 
-```bash
+Copy content of App.js, delete this file and create folder "app", there create file "_layout.jsx" and paste previously copied content.
+
+Go to app.json, under key "slug" add `"scheme": "app-name"` and optionally edit values of keys "name" and "slug".
+
+```cmd
 npx expo start -c
 ```
 
-In app/_layout.tsx delete all and type "rnfes".
+Copy content of app/_layout.tsx to new file app/index.jsx.
+
+In app/_layout.tsx delete all and type `rnfes`.
+
+## Install NativeWind
+
+Follow this documentation [NativeWind QuickStart Expo](https://www.nativewind.dev/quick-starts/expo#1-create-the-project)
