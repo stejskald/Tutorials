@@ -53,9 +53,9 @@ Join our community of developers creating universal apps.
 
 ### React Native Project Init
 
-```bash
-npx create-expo-app ./
+<code language="bash">npx create-expo-app@latest ./ --template blank</code> or <code>npx create-expo-app ./</code>
 
+```bash
 npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
 ```
 
