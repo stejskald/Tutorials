@@ -25,3 +25,27 @@ In app/_layout.tsx delete all and type `rnfes`.
 ## Install NativeWind
 
 Follow this documentation [NativeWind QuickStart Expo](https://www.nativewind.dev/quick-starts/expo#1-create-the-project)
+
+## Appwrite
+
+PackageName: com.jsm.aora.course
+
+### Install the Appwrite SDK for React Native and required dependencies
+
+```cmd
+npx expo install react-native-appwrite react-native-url-polyfill
+```
+
+### Initialize your SDK
+
+```JavaScript
+import { Client } from 'react-native-appwrite';
+// Init your React Native SDK
+const client = new Client();
+
+client
+    .setEndpoint('<http://localhost/v1>') // Your Appwrite Endpoint
+    .setProject('455x34dfkj') // Your project ID
+    .setPlatform('com.example.myappwriteapp') // Your application ID or bundle ID.
+;
+```
