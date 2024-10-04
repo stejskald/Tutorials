@@ -49,3 +49,17 @@ client
     .setPlatform('com.example.myappwriteapp') // Your application ID or bundle ID.
 ;
 ```
+
+## Install React Native Animatable package
+
+```cmd
+npm install react-native-animatable
+```
+
+## Install React Native Expo Audio/Video package
+
+Enables to play audio/video inside the application.
+
+```cmd
+npm install expo-av
+```
