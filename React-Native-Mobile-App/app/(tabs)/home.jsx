@@ -44,7 +44,7 @@ const Home = () => {
                   Welcome back,
                 </Text>
 
-                <Text className="text-2xl font-psemibold text-white">
+                <Text className="text-2xl font-psemibold text-secondary">
                   {user?.username}
                 </Text>
               </View>
