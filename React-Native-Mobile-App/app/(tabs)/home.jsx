@@ -41,15 +41,19 @@ const Home = () => {
                 <Text className="font-pmedium text-sm text-gray-100">
                   Welcome back
                 </Text>
+                
                 <Text className="text-2xl font-psemibold text-white">
-                  JSMastery
+                  JS Mastery
                 </Text>
               </View>
+
               <View className="my-1.5">
                 <Image source={images.logoSmall} className="w-9 h-10" resizeMode="contain" />
               </View>
             </View>
+
             <SearchInput />
+
             <View className="w-full flex-1 pt-5 pb-8">
               <Text className="text-gray-100 text-lg font-pregular mb-3">
                 Latest Videos
@@ -58,7 +62,6 @@ const Home = () => {
               {/* ?? [] means if it does not exist, make it an empty array */}
               <Trending posts={latestPosts ?? []} />
               {/* <Trending posts={[] ?? []} />  */}
-
             </View>
           </View>
         )}
