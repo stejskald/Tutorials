@@ -23,9 +23,9 @@ const {
 const client = new Client();
 
 client
-  .setEndpoint(appwriteConfig.endpoint)
-  .setProject(appwriteConfig.projectId)
-  .setPlatform(appwriteConfig.platform);
+  .setEndpoint(endpoint)
+  .setProject(projectId)
+  .setPlatform(platform);
 
 const account = new Account(client);
 const avatars = new Avatars(client);
@@ -134,6 +134,44 @@ export const getLatestPosts = async () => {
     )
 
     return posts.documents;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
+
+export const searchPosts = async (query) => {
+  try {
+    const posts = await databases.listDocuments(
+      databaseId,
+      videoCollectionId,
+      [Query.search("title", query)]
+    )
+
+    return posts.documents;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
+
+export const getUserPosts = async (userId) => {
+  try {
+    const posts = await databases.listDocuments(
+      databaseId,
+      videoCollectionId,
+      [Query.equal("creator", userId)]
+    )
+
+    return posts.documents;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
+
+export const signOut = async () => {
+  try {
+    const session = await account.deleteSession("current");
+
+    return session;
   } catch (error) {
     throw new Error(error);
   }
