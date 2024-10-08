@@ -56,10 +56,26 @@ client
 npm install react-native-animatable
 ```
 
-## Install React Native Expo Audio/Video package
+## Install Expo Audio/Video package
 
 Enables to play audio/video inside the application.
 
 ```cmd
 npm install expo-av
+```
+
+<!-- ## Install Expo Document Picker
+
+Enables selecting files from device before uploading them.
+
+```cmd
+npm install expo-document-picker 
+``` -->
+
+## Install Expo Image Picker
+
+Enables selecting image and video files from device before uploading them.
+
+```cmd
+npx expo install expo-image-picker
 ```
